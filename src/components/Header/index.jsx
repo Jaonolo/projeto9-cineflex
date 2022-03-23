@@ -1,6 +1,6 @@
 import './style.css'
 
-const Header = () => <header class="header">
+const Header = () => <header className="header">
     CINEFLEX
 </header>
 

@@ -1,0 +1,13 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home h1 {
+    display: flex;
+    height: 110px;
+    align-items: center;
+    color: #293845;
+    font-size: 24px;
+}
