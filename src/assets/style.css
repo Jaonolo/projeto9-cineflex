@@ -5,6 +5,6 @@
     font-family: 'Roboto';
 }
 
-*::after, *::before {
+*, *::after, *::before {
     box-sizing: inherit;
 }
