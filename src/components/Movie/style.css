@@ -1,0 +1,42 @@
+.movie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.movie h1 {
+    display: flex;
+    height: 110px;
+    align-items: center;
+    color: #293845;
+    font-size: 24px;
+}
+
+.movie h2 {
+    display: flex;
+    align-items: center;
+    height: 35px
+}
+
+.movie div {
+    width: 100%;
+    max-width: 320px;
+    color: #293845;
+}
+
+.movie div div {
+    display: flex;
+    margin: 22px 0;
+    gap: 8px;
+}
+
+.movie button {
+    width: 83px;
+    height: 43px;
+    border-radius: 3px;
+    border: none;
+    background-color: #E8833A;
+    color: white;
+    font-size: 18px
+}
