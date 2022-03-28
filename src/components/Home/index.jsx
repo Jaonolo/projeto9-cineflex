@@ -4,8 +4,9 @@ import axios from 'axios'
  
 import './style.css'
 
-const Home = () => {
+const Home = ({options}) => {
     const [movies, setMovies] = useState([])
+    const [selection, setSelection] = options
 
     useEffect(
         () => axios
@@ -17,7 +18,9 @@ const Home = () => {
         <h1>Selecione o filme</h1>
         <div>
             {movies.map(e =>
-                <Link to={`/filme/${e.id}`} key={`movie-${e.id}`}>
+                <Link to={`/filme/${e.id}`} key={`movie-${e.id}`} onClick={() => 
+                    setSelection({...selection, movie: {title: e.title, cover: e.posterURL}})}
+                >
                     <div className="frame"> 
                         <img src={e.posterURL} alt={`movie-${e.id}`}/>
                     </div>

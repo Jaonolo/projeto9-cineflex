@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
- 
+
+import Footer from '../Footer'
+
 import './style.css'
 
-const Movie = () => {
+const Movie = ({options}) => {
     const [sessions, setSessions] = useState([])
     const {movieId} = useParams()
+    const [selection, setSelection] = options
 
     useEffect(
         () => axios
@@ -17,10 +20,12 @@ const Movie = () => {
     return <main className="movie">
         <h1>Selecione o Horário</h1>
         <div>
-            {sessions.map(e => <>
-                    <h2>{e.weekday} - {e.date}</h2>
+            {sessions.map(ev => <>
+                    <h2>{ev.weekday} - {ev.date}</h2>
                     <div>
-                        {e.showtimes.map(e => <Link to={`/sessao/${e.id}`}>
+                        {ev.showtimes.map(e => <Link to={`/sessao/${e.id}`}
+                            onClick={() => setSelection({...selection, session: `${ev.weekday} - ${e.name}`})}
+                        >
                                 <button>{e.name}</button>
                             </Link>
                         )}
@@ -28,6 +33,11 @@ const Movie = () => {
                 </>
             )}
         </div>
+        <Footer 
+            cover = {selection.movie.cover} 
+            title = {selection.movie.title}
+            session = {selection.session}
+        />
     </main>
 }
 
