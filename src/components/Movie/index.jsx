@@ -24,7 +24,7 @@ const Movie = ({options}) => {
                     <h2>{ev.weekday} - {ev.date}</h2>
                     <div>
                         {ev.showtimes.map(e => <Link to={`/sessao/${e.id}`}
-                            onClick={() => setSelection({...selection, session: `${ev.weekday} - ${e.name}`})}
+                            onClick={() => setSelection({...selection, session: {weekday: ev.weekday, date: ev.date, time: e.name}})}
                         >
                                 <button>{e.name}</button>
                             </Link>

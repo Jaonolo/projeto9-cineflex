@@ -13,7 +13,7 @@ const Success = ({options}) => {
         <div>
             <h2>Filme e sessão</h2>
             <p>{movie.title}</p>
-            <p>{session}</p>
+            <p>{session.date} {session.time}</p>
         </div>
         <div>
             <h2>Ingressos</h2>
