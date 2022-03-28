@@ -1,0 +1,95 @@
+.session {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.session h1 {
+    display: flex;
+    height: 110px;
+    align-items: center;
+    color: #293845;
+    font-size: 24px;
+}
+
+.session h2 {
+    display: flex;
+    align-items: center;
+    height: 35px
+}
+
+.session > div {
+    width: 100%;
+    max-width: 320px;
+    color: #293845;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.session button {
+    width: 83px;
+    height: 43px;
+    border-radius: 3px;
+    border: none;
+    background-color: #E8833A;
+    color: white;
+    font-size: 18px
+}
+
+.seat {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C3CFD9;
+    font-size: 11px;
+    color: black
+}
+
+.seat.occupied {
+    background-color: #FBE192;
+}
+
+.seat.selected {
+    background-color: #8DD7CF;
+}
+
+.session form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.session form button {
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.session form input {
+    margin-bottom: 10px;
+    width: 320px;
+    height: 50px;
+    font-size: 18px;
+}
+
+.session form input::placeholder {
+    font-style: italic;
+    color: #AFAFAF;
+}
+
+.session .example {
+    margin-top: 16px;
+    color: #4E5A65;
+    font-size: 13px;
+    gap: 30px;
+}
+
+.example .seat{
+    margin: 0 auto
+}
